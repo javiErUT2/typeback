@@ -3,22 +3,28 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/src/db/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mysql2": "^3.10.1",
     "socket.io": "^4.7.5",
     "socket.io-client": "^4.7.5"
   },
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.8",
     "@types/socket.io": "^3.0.2",
     "@types/socket.io-client": "^3.0.0",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.3"
   },
   "keywords": [],
   "description": ""
