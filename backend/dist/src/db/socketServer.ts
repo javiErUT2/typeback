@@ -3,12 +3,15 @@ import { Server } from 'socket.io';
 import http from 'http';
 import mysql, { Connection } from 'mysql2/promise';
 import path from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const dbConfig = {
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "VCMessage"
+    host: process.env.DB_HOST || "localhost",
+    user: process.env.DB_USER || "root",
+    password: process.env.DB_PASSWORD || "",
+    database: process.env.DB_NAME || "VCMessage"
 };
 
 let dbConnection: Connection;
